@@ -35,13 +35,13 @@ class LoginManager {
             "userName": userName,
             "password": password
         ]
-                
+        
         WebServiceManger.sendRequest(requestHeaders: headers,
                                      url: url,
                                      requestMethod: .get,
                                      responseType: LoginResponse.self) {
-            (responseData: LoginResponse?, error: Bool?) in
-            completion(responseData, error)
+                                        (responseData: LoginResponse?, error: Bool?) in
+                                        completion(responseData, error)
         }
     }
 }
